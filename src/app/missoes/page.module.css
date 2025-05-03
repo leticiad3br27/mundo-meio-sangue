@@ -1,0 +1,83 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #f9f5e7, #e6dcc3);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Georgia', serif;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #4b3621;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #bfa76f;
+  padding-bottom: 10px;
+}
+
+.missao {
+  background-color: #fffaf0;
+  border: 2px solid #c2a477;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(128, 95, 56, 0.15);
+}
+
+.missao h2 {
+  font-size: 1.8rem;
+  color: #6a4e2c;
+  margin-bottom: 15px;
+}
+
+.missao p {
+  font-size: 1.1rem;
+  color: #4b3621;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bfa76f;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #fdfaf5;
+}
+
+.botao {
+  background-color: #8c6239;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #704b24;
+}
+
+.botao:disabled {
+  background-color: #b8a088;
+  cursor: not-allowed;
+}
+
+.mensagem {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #2d572c;
+  font-style: italic;
+}
+
+.progresso {
+  text-align: center;
+  font-size: 1rem;
+  color: #5a4633;
+  margin-top: 20px;
+}

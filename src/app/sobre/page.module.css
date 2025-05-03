@@ -1,0 +1,73 @@
+.container {
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* O restante do CSS permanece igual */
+  .title {
+    color: #2a4365;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    color: #3182ce;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .paragraph {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .list {
+    padding-left: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .featureCard {
+    background-color: #ebf8ff00;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3182ce;
+  }
+  
+  .featureCard h3 {
+    color: #2c5282;
+    margin-top: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .main {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+  }

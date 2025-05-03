@@ -1,0 +1,125 @@
+/* Container da Navegação */
+.navContainer {
+    height: 100px;
+    background-color: #0a1d3700;
+    color: #ffffff;
+    padding: 0.5rem 2rem; 
+    display: flex;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.75rem; /* Mais destaque */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* Selector para links - contêiner para centrar */
+.navLinks {
+    display: flex;
+    gap: 2.5rem; /* Espaçamento maior */
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Links individuais */
+.navLink {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+    position: relative;
+    padding: 1.5rem 0; /* Reduzido ainda mais para 0.1rem */
+    font-size: 1rem; /* Tamanho consistente */
+}
+
+/* Linha animada abaixo do link */
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #64b5f6;
+    transition: width 0.3s ease;
+}
+
+/* Efeito hover e foco */
+.navLink:hover,
+.navLink:focus {
+    color: #64b5f6;
+    outline: none;
+    transform: translateY(-2px);
+}
+.navLink:hover::after,
+.navLink:focus::after {
+    width: 100%;
+}
+
+/* Foco acessível */
+.navLink:focus {
+    outline: 2px solid #64b5f6;
+    outline-offset: 2px;
+}
+
+/* Botão menu (hamburger) */
+.menuButton {
+    margin-left: auto; /* Empurra para a direita */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.75rem;
+    transition: transform 0.25s ease;
+    display: none; /* escondido por padrão */
+}
+
+.menuButton:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .navLinks {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        background-color: rgba(10, 29, 55, 0.95);
+        display: none;
+        padding: 1rem 2rem; /* Padding vertical menor no mobile para reduzir distância */
+        gap: 1.5rem;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        width: 100%;
+    }
+    .navLinksOpen {
+        display: flex;
+        max-height: 500px; /* valor suficiente para abrigar todos os links */
+        opacity: 1;
+    }
+    .menuButton {
+        display: block;
+    }
+}
+  
+.active {
+    color: #64b5f6;
+}
+
+.active::after {
+    width: 100%;
+}
